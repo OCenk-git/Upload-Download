@@ -1,0 +1,18 @@
+﻿@model NETDBContext
+
+<table>
+	@foreach (var item in Model.DocStores)
+	{
+		<tr>
+		<td>
+			<a asp-action="DateiDownload" asp-route-filename="@item.DocName">@item.DocName</a>
+		</td>
+		<td>
+			@item.ContentType
+		</td>
+		<td>
+			@item.InsertionDate
+		</td>
+		</tr>
+	}
+</table>
